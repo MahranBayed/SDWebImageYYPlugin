@@ -172,7 +172,7 @@ static NSData * SDYYPluginCacheDataWithImageData(UIImage *image, NSData *imageDa
         [self.diskCache objectForKey:key withBlock:^(NSString * _Nonnull key, id<NSCoding> _Nullable object) {
             NSData *diskData = nil;
             NSObject *objectNew = (NSObject *)object;
-            if ([object isKindOfClass:[NSData class]]) {
+            if ([objectNew isKindOfClass:[NSData class]]) {
                 diskData = (NSData *)object;
             }
             queryDiskBlock(diskData);
